@@ -13,27 +13,27 @@ const CV = (): React.ReactElement<any> => (
           <a href={'mailto:info@edwarddamato.com'}>info@edwarddamato.com</a>
         </li>
         <li className={'contact online print'}>
-          <a href={'http://www.edwarddamato.com'} target={'blank'}>
+          <a href={'http://www.edwarddamato.com'} target={'_blank'}>
             edwarddamato.com
           </a>
         </li>
         <li className={'contact online'}>
-          <a href={'https://github.com/edwarddamato'} target={'blank'}>
+          <a href={'https://github.com/edwarddamato'} target={'_blank'}>
             Github
           </a>
         </li>
         <li className={'contact print'}>
-          <a href={'https://github.com/edwarddamato'} target={'blank'}>
+          <a href={'https://github.com/edwarddamato'} target={'_blank'}>
             {'https://github.com/edwarddamato'}
           </a>
         </li>
         <li className={'contact online'}>
-          <a href={'http://lnkd.in/rHMR2B'} target={'blank'}>
+          <a href={'http://lnkd.in/rHMR2B'} target={'_blank'}>
             LinkedIn
           </a>
         </li>
         <li className={'contact print'}>
-          <a href={'http://lnkd.in/rHMR2B'} target={'blank'}>
+          <a href={'http://lnkd.in/rHMR2B'} target={'_blank'}>
             {'http://lnkd.in/rHMR2B'}
           </a>
         </li>
@@ -75,8 +75,6 @@ const CV = (): React.ReactElement<any> => (
           </p>
           <p className={'note'}>
             {[
-              `Delivered a reusable, scalable, WAI-ARIA compliant library in vanilla JavaScript for eBay web
-              applications, which provides user onboarding tours for any eBay user.`,
               `Delivered a reusable, scalable, WAI-ARIA compliant library in vanilla JavaScript for eBay web
               applications, which provides user onboarding tours for any eBay user.`,
               `Delivered an isomorphic, fully responsive, WAI-ARIA compliant web application for eBay sellers
