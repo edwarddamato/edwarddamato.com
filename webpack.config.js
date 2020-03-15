@@ -1,18 +1,17 @@
-const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
-  template: './public/index.html',
-  filename: 'index.html',
-  inject: 'body',
-  chunks: ['index']
-});
-const HtmlWebpackPluginConfigCV = new HtmlWebpackPlugin({
-  template: './public/cv.html',
-  filename: 'cv.html',
-  inject: 'body',
-  chunks: ['cv']
-});
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPluginConfigIndex = new HtmlWebpackPlugin({
+//   template: './public/index.html',
+//   filename: 'index.html',
+//   inject: 'body',
+//   chunks: ['index']
+// });
+// const HtmlWebpackPluginConfigCV = new HtmlWebpackPlugin({
+//   template: './public/cv.html',
+//   filename: 'cv.html',
+//   inject: 'body',
+//   chunks: ['cv']
+// });
 
 const SOURCE = /src/;
 
@@ -58,8 +57,8 @@ module.exports = {
     ]
   },
   plugins: [
-    HtmlWebpackPluginConfigIndex,
-    HtmlWebpackPluginConfigCV,
+    // HtmlWebpackPluginConfigIndex,
+    // HtmlWebpackPluginConfigCV,
     new ExtractTextPlugin({
       filename: '[name].css',
       allChunks: true

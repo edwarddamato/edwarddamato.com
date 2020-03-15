@@ -2,13 +2,13 @@ import mockContactLinks from './expected/contactLinks';
 import { getContactLinks } from '..';
 
 const mockContentfulClient = {
-  getEntries: () => Promise.resolve(mockContactLinks)
-} as any;
+  getEntries: (): Promise<object> => Promise.resolve(mockContactLinks)
+};
 
 describe('contactLink', () => {
   describe('getContactLinks()', () => {
     it('should return all contact links', async () => {
-      const contactLinks = await getContactLinks(mockContentfulClient);
+      const contactLinks = await getContactLinks(mockContentfulClient as any);
       expect(contactLinks).toEqual([
         {
           text: 'http://lnkd.in/rHMR2B',
