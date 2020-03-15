@@ -65,7 +65,26 @@ const CV = (): React.ReactElement<any> => (
       <h2>Industry</h2>
       <ol className={'timeline'}>
         <li>
-          <p className={'date'}>2016 - present</p>
+          <p className={'date'}>2018 - present</p>
+          <p>
+            <strong>Senior Software Engineer</strong>
+            &nbsp;&bull;&nbsp;
+            <a href={'https://www.bulb.co.uk'} target={'blank'} className={'company'}>
+              Bulb
+            </a>
+          </p>
+          <p className={'note'}>
+            {[].map((note, i) => (
+              <React.Fragment key={i}>
+                &bull;&nbsp;
+                {`${note}`}
+                <br />
+              </React.Fragment>
+            ))}
+          </p>
+        </li>
+        <li>
+          <p className={'date'}>2016 - 2018</p>
           <p>
             <strong>Agile Software Engineer</strong>
             &nbsp;&bull;&nbsp;

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --progress",
     "clean": "del 'dist/'",
     "build": "yarn build:dev",
     "build:dev": "yarn clean && webpack --mode development",
