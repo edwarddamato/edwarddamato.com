@@ -1,14 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "target": "es5",
-    "lib": ["es2015", "dom"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "strict": true,
-    "jsx": "react",
     "rootDir": "src",
+    "outDir": "./dist/",
+    "module": "commonjs",
+    "sourceMap": true,
+    "target": "es6",
+    "jsx": "react",
+    // "lib": ["es2015", "dom"],
   },
   "exclude": ["node_modules", "**/__tests__/*.tsx"]
 }

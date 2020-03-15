@@ -17,33 +17,37 @@ const HtmlWebpackPluginConfigCV = new HtmlWebpackPlugin({
 const SOURCE = /src/;
 
 module.exports = {
-  entry: {
-    index: './src/index/Index.tsx',
-    cv: './src/cv/CV.tsx'
-  },
-  output: {
-    filename: '[name].bundle.js',
-    path: __dirname + '/dist'
-  },
   devtool: 'source-map',
+  // entry: {
+  //   index: './src/index/Index.tsx',
+  //   cv: './src/cv/CV.tsx'
+  // },
+  // output: {
+  //   filename: '[name].bundle.js',
+  //   path: __dirname + '/dist'
+  // },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json']
   },
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.js$/,
-        loaders: 'source-map-loader',
-        include: [SOURCE]
+        test: /\.ts(x?)$/,
+        exclude: /node_modules/,
+        include: [SOURCE],
+        use: [
+          {
+            loader: 'ts-loader'
+          }
+        ]
       },
+      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       {
-        test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-        include: [SOURCE]
+        enforce: 'pre',
+        include: [SOURCE],
+        test: /\.js$/,
+        loader: 'source-map-loader'
       },
-      { test: /\.js$/, loader: 'babel-loader', include: [SOURCE] },
-      { test: /\.jsx$/, loader: 'babel-loader', include: [SOURCE] },
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
@@ -60,5 +64,9 @@ module.exports = {
       filename: '[name].css',
       allChunks: true
     })
-  ]
+  ],
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM'
+  }
 };

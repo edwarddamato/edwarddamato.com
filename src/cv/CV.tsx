@@ -134,23 +134,30 @@ const CV = (): React.ReactElement<any> => (
           <p className={'note'}>
             Delivered numerous projects across different industries as a full stack developer, often building web
             projects from the ground up, using ASP.NET, SQL Server and JavaScript amongst other technologies.
-            Highlighted projects include:<br />
+            Highlighted projects include:
+            <br />
             &bull; Delivered a real-time web-based solution as part of&nbsp;
             <a href={'http://www.electricvehiclesmalta.eu/chargingstations'} target={'blank'}>
               electricvehiclesmalta.eu
-            </a>, showing 90 geo-located eletric charging stations offering booking facilities.<br />
+            </a>
+            , showing 90 geo-located eletric charging stations offering booking facilities.
+            <br />
             &bull; Delivered&nbsp;
             <a href={'https://www.laferla.com.mt'} target={'blank'}>
               Laferla.com.mt
             </a>
             as the lead developer, creating a wizard-like flow to purchase insurance online, delivering dynamic quotes
-            and discounts.<br />
+            and discounts.
+            <br />
             &bull; Heavily contributed as the lead developer to the delivery of&nbsp;
             <a href={'https://myeportfolio.gov.mt/'} target={'blank'}>
               ePortfolio
-            </a>, building core features from the ground up across the whole stack.<br />
+            </a>
+            , building core features from the ground up across the whole stack.
+            <br />
             &bull; Heavily contributed to the creation of ICON's in-house CMS (called SNAP), building core features from
-            the ground up across the whole stack such as an interactive and dynamic Page Console.<br />
+            the ground up across the whole stack such as an interactive and dynamic Page Console.
+            <br />
           </p>
         </li>
         <li>
@@ -238,7 +245,8 @@ const CV = (): React.ReactElement<any> => (
               object with a countdown. When the countdown expires, the person holding the object loses. The game works
               with each person having their own smartphone, each connected to the same game session. With the use of
               gestures, a user can pass the ‘object’ to another person in the session.
-            </q>, Advisor: Dr. Guy Saward
+            </q>
+            , Advisor: Dr. Guy Saward
           </p>
         </li>
         <li>
