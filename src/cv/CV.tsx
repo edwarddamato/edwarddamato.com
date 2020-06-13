@@ -55,7 +55,7 @@ const CV = (): React.ReactElement<any> => (
         <a href={'https://bulb.co.uk'} target={'_blank'} rel={'noopener noreferrer'}>
           Bulb
         </a>
-        ; part of the wider Core Platform team building Bulb's in-house biling platform.
+        ; part of the wider Core Platform team building Bulb's in-house billing platform.
       </p>
       <p>
         {`Experienced Software Engineer with a demonstrated history of working in the internet industry.
