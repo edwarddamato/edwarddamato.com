@@ -51,8 +51,8 @@ const CV = (): React.ReactElement<any> => (
     <section id={'summary'}>
       <h1>Summary</h1>
       <p>
-        {`Currently working as an Agile Software Engineer; part of a cross-functional
-        team improving Seller Experience at eBay.`}
+        {`Currently working as a Senior Software Engineer at <a href={'https://bulb.co.uk'} target={'_blank'}>Bulb</a>; forming part of the wider Core Platform
+        team building Bulb's in-house biling platform.`}
       </p>
       <p>
         {`Experienced Software Engineer with a demonstrated history of working in the internet industry.
