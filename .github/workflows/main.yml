@@ -22,13 +22,46 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v1.4.2
+      with:
+        node-version: 10
 
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
-
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
+    - name: Install
+      run: yarn install
+    
+    - name: Test
+      run: yarn test
+    
+    - name: Build
+      run: yarn build:prod
+    
+    - name: Deploy
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        echo "Setting up SSH key..."
+        echo "Creating ~/.ssh/"
+        mkdir -p ~/.ssh
+        
+        echo "Writing SSH into ~/.ssh/..."
+        echo "${{ secrets.SSH_KEY }}" >> ~/.ssh/do_ssh
+        
+        echo "Setting chmod 0600 perms..."
+        chmod 0600 ~/.ssh/do_ssh
+        
+        echo "Setting up known_hosts..."
+        ssh-keyscan -H ${{secrets.HOST}} > ~/.ssh/known_hosts
+        
+        echo "Clear out remote dist dir..."
+        ssh -i ~/.ssh/do_ssh edward@${{ secrets.HOST }} rm -rf /var/www/edwarddamato.com/dist/
+        
+        scp -i ~/.ssh/do_ssh -r dist edward@${{ secrets.HOST }}:/var/www/edwarddamato.com/
+        
+        echo "Clear out remote html dir..."
+        ssh -i ~/.ssh/do_ssh edward@${{ secrets.HOST }} rm -rf /var/www/edwarddamato.com/html/
+        
+        echo "Rename remote dist to html..."
+        ssh -i ~/.ssh/do_ssh edward@${{ secrets.HOST }} mv /var/www/edwarddamato.com/dist/ /var/www/edwarddamato.com/html/
+        
+        echo "Clean out SSH key..."
+        rm ~/.ssh/do_ssh
+        
+        echo "Done!"
+        
