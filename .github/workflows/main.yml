@@ -27,7 +27,7 @@ jobs:
         
     - name: Set up SSH key
       run: |
-        echo ${{ secrets.SSH_KEY }} >> do_ssh
+        echo "${{ secrets.SSH_KEY }}" >> do_ssh
         echo "foo" >> foo.txt
 
     - name: Install
