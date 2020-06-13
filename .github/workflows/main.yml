@@ -24,8 +24,17 @@ jobs:
     - uses: actions/setup-node@v1.4.2
       with:
         node-version: 10
-        
-    - name: Set up SSH key
+
+    - name: Install
+      run: yarn install
+    
+    - name: Test
+      run: yarn test
+    
+    - name: Build
+      run: yarn build:prod
+    
+    - name: Deploy
       run: |
         echo "Setting up SSH key..."
         echo "Creating ~/.ssh/"
@@ -40,24 +49,19 @@ jobs:
         echo "Setting up known_hosts..."
         ssh-keyscan -H ${{secrets.HOST}} > ~/.ssh/known_hosts
         
-        echo "Clear out temp-html dir..."
-        ssh -i ~/.ssh/do_ssh edward@${{ secrets.HOST }} rm -rf /var/www/edwarddamato.com/temp-html/
+        echo "Clear out remote dist dir..."
+        ssh -i ~/.ssh/do_ssh edward@${{ secrets.HOST }} rm -rf /var/www/edwarddamato.com/dist/
         
-        mkdir foobar
+        scp -i ~/.ssh/do_ssh -r dist edward@${{ secrets.HOST }}:/var/www/edwarddamato.com/
         
-        scp -i ~/.ssh/do_ssh -r foobar edward@${{ secrets.HOST }}:/var/www/edwarddamato.com/
+        echo "Clear out remote html dir..."
+        ssh -i ~/.ssh/do_ssh edward@${{ secrets.HOST }} rm -rf /var/www/edwarddamato.com/html/
+        
+        echo "Rename remote dist to html..."
+        ssh -i ~/.ssh/do_ssh edward@${{ secrets.HOST }} mv /var/www/edwarddamato.com/dist/ /var/www/edwarddamato.com/html/
         
         echo "Clean out SSH key..."
         rm ~/.ssh/do_ssh
         
         echo "Done!"
-
-    - name: Install
-      run: yarn install
-    
-    - name: Test
-      run: yarn test
-    
-    - name: Build
-      run: yarn build:prod
         
