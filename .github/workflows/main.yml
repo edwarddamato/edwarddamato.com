@@ -27,10 +27,11 @@ jobs:
         
     - name: Set up SSH key
       run: |
-        echo "${{ secrets.SSH_KEY }}" >> do_ssh
-        echo "foo" >> foo.txt
         mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_KEY }}" >> ~/.ssh/do_ssh
+        chmod 0600 ~/.ssh/do_ssh
         ssh-keyscan -H ${{secrets.HOST}} > ~/.ssh/known_hosts
+        echo "foo" >> foo.txt
         sftp -i do_ssh edward@${{ secrets.HOST }}
         cd /var/www/edwarddamato.com/html/
         put foo.txt
