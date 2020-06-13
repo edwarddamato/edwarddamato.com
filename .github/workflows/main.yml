@@ -41,7 +41,7 @@ jobs:
         ssh-keyscan -H ${{secrets.HOST}} > ~/.ssh/known_hosts
         
         echo "Clear out temp-html dir..."
-        ssh -i /e/dev/.ssh/github_deploy edward@206.189.23.244 rm -rf /var/www/edwarddamato.com/temp-html/
+        ssh -i ~/.ssh/do_ssh edward@{{ secrets.HOST }} rm -rf /var/www/edwarddamato.com/temp-html/
         
         mkdir foobar
         
