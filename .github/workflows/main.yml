@@ -32,7 +32,7 @@ jobs:
         chmod 0600 ~/.ssh/do_ssh
         ssh-keyscan -H ${{secrets.HOST}} > ~/.ssh/known_hosts
         echo "foo" >> foo.txt
-        scp -i ~/.ssh/do_ssh foo.txt edward@${{ secrets.HOST }}/var/www/edwarddamato.com/html/
+        scp -i ~/.ssh/do_ssh foo.txt edward@${{ secrets.HOST }}/var/www/edwarddamato.com/html/foo.txt
 
     - name: Install
       run: yarn install
