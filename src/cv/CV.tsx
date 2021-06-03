@@ -72,7 +72,7 @@ const CV = (): React.ReactElement<any> => (
           <p>
             <strong>Senior Software Engineer</strong>
             &nbsp;&bull;&nbsp;
-            <a href={'https://www.bulb.co.uk'} target={'blank'} className={'company'}>
+            <a href={'https://www.bulb.co.uk'} target={'_blank'} rel={'noopener noreferrer'} className={'company'}>
               Bulb
             </a>
           </p>
@@ -97,7 +97,7 @@ const CV = (): React.ReactElement<any> => (
           <p>
             <strong>Agile Software Engineer</strong>
             &nbsp;&bull;&nbsp;
-            <a href={'https://www.ebay.co.uk'} target={'blank'} className={'company'}>
+            <a href={'https://www.ebay.co.uk'} target={'_blank'} rel={'noopener noreferrer'} className={'company'}>
               eBay
             </a>
           </p>
@@ -126,7 +126,7 @@ const CV = (): React.ReactElement<any> => (
           <p>
             <strong>UI Developer</strong>
             &nbsp;&bull;&nbsp;
-            <a href={'https://www.harrods.com'} target={'blank'} className={'company'}>
+            <a href={'https://www.harrods.com'} target={'_blank'} rel={'noopener noreferrer'} className={'company'}>
               Harrods
             </a>
           </p>
@@ -155,7 +155,7 @@ const CV = (): React.ReactElement<any> => (
           <p>
             <strong>Web Projects Team Lead / Senior .NET Web Developer</strong>
             &nbsp;&bull;&nbsp;
-            <a href={'https://www.icon.com.mt'} target={'blank'} className={'company'}>
+            <a href={'https://www.icon.com.mt'} target={'_blank'} rel={'noopener noreferrer'} className={'company'}>
               ICON
             </a>
           </p>
@@ -165,20 +165,20 @@ const CV = (): React.ReactElement<any> => (
             Highlighted projects include:
             <br />
             &bull; Delivered a real-time web-based solution as part of&nbsp;
-            <a href={'http://www.electricvehiclesmalta.eu'} target={'blank'}>
+            <a href={'http://www.electricvehiclesmalta.eu'} target={'_blank'} rel={'noopener noreferrer'}>
               electricvehiclesmalta.eu
             </a>
             , showing 90 geo-located eletric charging stations offering booking facilities.
             <br />
             &bull; Delivered&nbsp;
-            <a href={'https://www.laferla.com.mt'} target={'blank'}>
+            <a href={'https://www.laferla.com.mt'} target={'_blank'} rel={'noopener noreferrer'}>
               Laferla.com.mt
             </a>
             as the lead developer, creating a wizard-like flow to purchase insurance online, delivering dynamic quotes
             and discounts.
             <br />
             &bull; Heavily contributed as the lead developer to the delivery of&nbsp;
-            <a href={'https://myeportfolio.gov.mt/'} target={'blank'}>
+            <a href={'https://myeportfolio.gov.mt/'} target={'_blank'} rel={'noopener noreferrer'}>
               ePortfolio
             </a>
             , building core features from the ground up across the whole stack.
@@ -193,7 +193,7 @@ const CV = (): React.ReactElement<any> => (
           <p>
             <strong>Software Developer</strong>
             &nbsp;&bull;&nbsp;
-            <a href={'https://www.transactium.com'} target={'blank'} className={'company'}>
+            <a href={'https://www.transactium.com'} target={'_blank'} rel={'noopener noreferrer'} className={'company'}>
               Transactium
             </a>
           </p>
@@ -210,7 +210,12 @@ const CV = (): React.ReactElement<any> => (
           <p>
             <strong>JavaScript coach</strong>
             &nbsp;&bull;&nbsp;
-            <a href={'https://www.codebar.io/workshops/648'} target={'blank'} className={'company'}>
+            <a
+              href={'https://www.codebar.io/workshops/648'}
+              target={'_blank'}
+              rel={'noopener noreferrer'}
+              className={'company'}
+            >
               Codebar.io Workshop
             </a>
           </p>
@@ -221,7 +226,12 @@ const CV = (): React.ReactElement<any> => (
           <p>
             <strong>Innovation project</strong>
             &nbsp;&bull;&nbsp;
-            <a href={'https://twitter.com/devinwenig/status/908444313050169344'} target={'blank'} className={'company'}>
+            <a
+              href={'https://twitter.com/devinwenig/status/908444313050169344'}
+              target={'_blank'}
+              rel={'noopener noreferrer'}
+              className={'company'}
+            >
               eBay EXPO 2017
             </a>
           </p>
@@ -238,7 +248,8 @@ const CV = (): React.ReactElement<any> => (
             &nbsp;&bull;&nbsp;
             <a
               href={'https://www.icon.com.mt/news/storyteller-available-now-2/'}
-              target={'blank'}
+              target={'_blank'}
+              rel={'noopener noreferrer'}
               className={'company'}
             >
               Tech Spark / Microsoft Hackathon
@@ -261,7 +272,7 @@ const CV = (): React.ReactElement<any> => (
             <strong>B.Sc. in Computer Science</strong> (1st class)
           </p>
           <p>
-            <a href={'https://www.herts.ac.uk/'} target={'blank'}>
+            <a href={'https://www.herts.ac.uk/'} target={'_blank'} rel={'noopener noreferrer'}>
               University of Hertfordshire
             </a>
           </p>
@@ -283,7 +294,7 @@ const CV = (): React.ReactElement<any> => (
             <strong>Diploma in Computing &amp; Information Systems</strong>
           </p>
           <p>
-            <a href={'https://www.gold.ac.uk/'} target={'blank'}>
+            <a href={'https://www.gold.ac.uk/'} target={'_blank'} rel={'noopener noreferrer'}>
               University of London
             </a>
           </p>
@@ -294,7 +305,7 @@ const CV = (): React.ReactElement<any> => (
             <strong>MCAST-BTEC National Diploma in Computing (Software Development)</strong>
           </p>
           <p>
-            <a href={'http://www.mcast.edu.mt/inst/6'} target={'blank'}>
+            <a href={'http://www.mcast.edu.mt/inst/6'} target={'_blank'} rel={'noopener noreferrer'}>
               MCAST Malta
             </a>
           </p>
@@ -323,8 +334,8 @@ const CV = (): React.ReactElement<any> => (
         <li>Relational databases primarily Postgres, MSSQL, MySQL</li>
         <li>
           I have experience with numerous other libraries, tools and frameworks related to the above including npm,
-          Yarn, Ramda.js, Jest, Mocha, Cypress, Chai, sinon, Nightwatch.js, eslint/tslint, Grunt/Gulp, prettier, nock, axios,
-          Selenium, date-fns, momentjs
+          Yarn, Ramda.js, Jest, Mocha, Cypress, Chai, sinon, Nightwatch.js, eslint/tslint, Grunt/Gulp, prettier, nock,
+          axios, Selenium, date-fns, momentjs
         </li>
       </ul>
       <p>
@@ -334,10 +345,25 @@ const CV = (): React.ReactElement<any> => (
       <h2>Practices and Methodologies</h2>
       <ul>
         <li>Monitoring & alerting using tools such as DataDog, PagerDuty, Google Stackdriver, Sentry</li>
-        <li>Technical design documents and <a href="https://engineering.atspotify.com/2020/04/14/when-should-i-write-an-architecture-decision-record/#:~:text=An%20Architecture%20Decision%20Record%20(ADR,ADRs%20to%20document%20their%20decisions." target="_blank">ADRs</a></li>
+        <li>
+          Technical design documents and{' '}
+          <a
+            href="https://engineering.atspotify.com/2020/04/14/when-should-i-write-an-architecture-decision-record/#:~:text=An%20Architecture%20Decision%20Record%20(ADR,ADRs%20to%20document%20their%20decisions."
+            target="_blank"
+            rel={'noopener noreferrer'}
+          >
+            ADRs
+          </a>
+        </li>
         <li>Test-driven development</li>
-        <li>Testing, testing strategies (unit, integration, end to end, regression, exploratory), test automation</li>        <li>Continuous integration and delivery (automation, build pipelines)</li>
-        <li>Build pipelines; most recently using CircleCI & GitHub Workflows; experience with using Jenkins, Gitlab, TravisCI</li>
+        <li>
+          Testing, testing strategies (unit, integration, end to end, regression, exploratory), test automation
+        </li>{' '}
+        <li>Continuous integration and delivery (automation, build pipelines)</li>
+        <li>
+          Build pipelines; most recently using CircleCI & GitHub Workflows; experience with using Jenkins, Gitlab,
+          TravisCI
+        </li>
         <li>Continous code quality inspection and static code analysis (mostly using Sonarqube and ShiftLeft)</li>
         <li>Coding katas</li>
         <li>Trunk based and feature-branch based development</li>
@@ -358,7 +384,11 @@ const CV = (): React.ReactElement<any> => (
             <strong>Best eGovernment Initiative</strong> (electricvehiclesmalta.eu - ICON)
           </p>
           <p>
-            <a href={'http://ebusinessawards.mca.org.mt/past-editions/2015'} target={'blank'}>
+            <a
+              href={'http://ebusinessawards.mca.org.mt/past-editions/2015'}
+              target={'_blank'}
+              rel={'noopener noreferrer'}
+            >
               MCA eBusiness Awards 2015
             </a>
           </p>
@@ -369,7 +399,11 @@ const CV = (): React.ReactElement<any> => (
             <strong>Most Innovative Solution</strong> (Laferla Insurance - ICON)
           </p>
           <p>
-            <a href={'http://ebusinessawards.mca.org.mt/past-editions/2014'} target={'blank'}>
+            <a
+              href={'http://ebusinessawards.mca.org.mt/past-editions/2014'}
+              target={'_blank'}
+              rel={'noopener noreferrer'}
+            >
               MCA eBusiness Awards 2014
             </a>
           </p>
@@ -396,7 +430,9 @@ const CV = (): React.ReactElement<any> => (
     </section>
     <section id={'personal-interests'}>
       <h1>Personal interests</h1>
-      <p>Animals, environment, wildlife, sustainability and renewables, Brazilian jiu-jitsu, football, interior design.</p>
+      <p>
+        Animals, environment, wildlife, sustainability and renewables, Brazilian jiu-jitsu, football, interior design.
+      </p>
     </section>
     <footer>
       <p>References are available upon request.</p>
