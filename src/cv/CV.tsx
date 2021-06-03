@@ -55,7 +55,7 @@ const CV = (): React.ReactElement<any> => (
         <a href={'https://bulb.co.uk'} target={'_blank'} rel={'noopener noreferrer'}>
           Bulb
         </a>
-        ; part of the wider Core Platform team building Bulb's in-house billing platform.
+        &nbsp;as a tech lead for the Comms Platform team, building Bulb's in-house communications platform.
       </p>
       <p>
         {`Experienced Software Engineer with a demonstrated history of working in the internet industry.
@@ -77,7 +77,13 @@ const CV = (): React.ReactElement<any> => (
             </a>
           </p>
           <p className={'note'}>
-            {[].map((note, i) => (
+            {[
+              `Built from the ground up Bulb's communications platform in a team of two (three since Feb 2021). Supporting mission critical comms such as monthly billing and welcome packs across 4 markets.`,
+              `Worked with business stakeholders and consuming teams on a product and technical roadmap for the platform, delivering key functionality such as multi channel support (e.g. SMS, Push Notifications) and template rendering.`,
+              `Built a resilient and fault tolerant platform based on queues and events whilst leveraging cloud scaling strategies, delivering over 24m comms since 2019.`,
+              `Delivered an automated API load testing suite using k6 and DataDog running on a replicable Kubernetes workload, helping to measure any performance regressions before major releases.`,
+              `One of the main organisers of Bulb's first ever (and so far only) hackaton, with great success getting involvement from all guilds within the company.`
+            ].map((note, i) => (
               <React.Fragment key={i}>
                 &bull;&nbsp;
                 {`${note}`}
@@ -159,7 +165,7 @@ const CV = (): React.ReactElement<any> => (
             Highlighted projects include:
             <br />
             &bull; Delivered a real-time web-based solution as part of&nbsp;
-            <a href={'http://www.electricvehiclesmalta.eu/chargingstations'} target={'blank'}>
+            <a href={'http://www.electricvehiclesmalta.eu'} target={'blank'}>
               electricvehiclesmalta.eu
             </a>
             , showing 90 geo-located eletric charging stations offering booking facilities.
@@ -229,7 +235,7 @@ const CV = (): React.ReactElement<any> => (
           <p className={'date'}>Dec 2013</p>
           <p>
             <strong>Hackathon for charity</strong>
-            &bull;
+            &nbsp;&bull;&nbsp;
             <a
               href={'https://www.icon.com.mt/news/storyteller-available-now-2/'}
               target={'blank'}
@@ -252,7 +258,7 @@ const CV = (): React.ReactElement<any> => (
         <li>
           <p className={'date'}>2013–2014</p>
           <p>
-            <strong>B.Sc. in Computer Science</strong> (1st className)
+            <strong>B.Sc. in Computer Science</strong> (1st class)
           </p>
           <p>
             <a href={'https://www.herts.ac.uk/'} target={'blank'}>
@@ -298,37 +304,41 @@ const CV = (): React.ReactElement<any> => (
     <section id={'technical-skills'}>
       <h1>Skills</h1>
       <h2>Technical</h2>
-      <p>Vast understanding of, and experience working with web technologies, including:</p>
+      <p>Vast understanding of, and experience working with technologies, including:</p>
       <ul>
         <li>JavaScript (ECMAScript), DOM &amp; related APIs</li>
         <li>TypeScript</li>
-        <li>Node.js</li>
-        <li>CSS (including CSS3)</li>
-        <li>CSS preprocessors (SASS, LESS)</li>
+        <li>Google Cloud & Kubernetes</li>
+        <li>Docker & Dockerised applications</li>
+        <li>Event and queue based architectures (using tools such as Redis, Google Cloud Pub/Sub)</li>
+        <li>Node.js (v8-v14)</li>
+        <li>CSS, CSS3, CSS preprocessors (SASS, LESS), Styled Components</li>
         <li>HTML5 and related APIs</li>
-        <li>Web frameworks; including React, MarkoJS, Angular, JQuery</li>
+        <li>Various frameworks; including React, NextJS, MarkoJS, Angular, JQuery</li>
         <li>Single page applications and state management; including Redux</li>
         <li>WAI-ARIA compliance (accessibility)</li>
         <li>Bundling and minification (Webpack, Lasso)</li>
         <li>Code transpilers (Babel, TypeScript)</li>
-        <li>RESTful APIs</li>
+        <li>RESTful & GraphQL APIs (design, implementation, documentation (Swagger, JSDoc), Versioning</li>
+        <li>Relational databases primarily Postgres, MSSQL, MySQL</li>
         <li>
           I have experience with numerous other libraries, tools and frameworks related to the above including npm,
-          Yarn, Ramda.js, Jest, Mocha, Chai, sinon, Nightwatch.js, eslint/tslint, Grunt/Gulp, prettier, nock, axios,
-          Selenium
+          Yarn, Ramda.js, Jest, Mocha, Cypress, Chai, sinon, Nightwatch.js, eslint/tslint, Grunt/Gulp, prettier, nock, axios,
+          Selenium, date-fns, momentjs
         </li>
       </ul>
       <p>
         Throughout the years, I have also worked with a wide range of programming languages and technologies, including
-        C#/ASP.NET, SQL (SQL Server, MySQL, Oracle, Teradata), Mongo, Java and Scala.
+        C#/ASP.NET, Microsoft Azure, Oracle, Mongo, Java and Scala.
       </p>
       <h2>Practices and Methodologies</h2>
       <ul>
+        <li>Monitoring & alerting using tools such as DataDog, PagerDuty, Google Stackdriver, Sentry</li>
+        <li>Technical design documents and <a href="https://engineering.atspotify.com/2020/04/14/when-should-i-write-an-architecture-decision-record/#:~:text=An%20Architecture%20Decision%20Record%20(ADR,ADRs%20to%20document%20their%20decisions." target="_blank">ADRs</a></li>
         <li>Test-driven development</li>
-        <li>Testing and testing strategies (unit, integration, end to end, regression, exploratory)</li>
-        <li>Continuous integration and delivery (automation, build pipelines)</li>
-        <li>Build pipelines; mostly using Jenkins, Gitlab, TravisCI</li>
-        <li>Continous code quality inspection and static code analysis (mostly using Sonarqube)</li>
+        <li>Testing, testing strategies (unit, integration, end to end, regression, exploratory), test automation</li>        <li>Continuous integration and delivery (automation, build pipelines)</li>
+        <li>Build pipelines; most recently using CircleCI & GitHub Workflows; experience with using Jenkins, Gitlab, TravisCI</li>
+        <li>Continous code quality inspection and static code analysis (mostly using Sonarqube and ShiftLeft)</li>
         <li>Coding katas</li>
         <li>Trunk based and feature-branch based development</li>
         <li>
@@ -336,6 +346,7 @@ const CV = (): React.ReactElement<any> => (
           sessions)
         </li>
         <li>Security (OWASP Top 10)</li>
+        <li>Measuring impact through data;</li>
       </ul>
     </section>
     <section id={'awards'}>
@@ -381,11 +392,11 @@ const CV = (): React.ReactElement<any> => (
     </section>
     <section id={'professional-interests'}>
       <h1>Professional interests</h1>
-      <p>Front-end web development, functional programming, open source, give back to the community through coding</p>
+      <p>Simplicity, functional programming, open source, give back to the community through coding</p>
     </section>
     <section id={'personal-interests'}>
       <h1>Personal interests</h1>
-      <p>Sports and fitness, Brazilian jiu-jitsu, football, interior design, environment, animals and wildlife.</p>
+      <p>Animals, environment, wildlife, sustainability and renewables, Brazilian jiu-jitsu, football, interior design.</p>
     </section>
     <footer>
       <p>References are available upon request.</p>
